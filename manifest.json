@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Domain Based Download Manager",
+  "version": "1.0",
+  "permissions": [
+    "downloads",
+    "downloads.shelf",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  }
+}
+
