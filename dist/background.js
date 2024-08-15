@@ -1,7 +1,7 @@
 "use strict";
 chrome.downloads.onDeterminingFilename.addListener((downloadItem, suggest) => {
     const url = new URL(downloadItem.url);
-    const domain = url.origin.replace(/^https?:\/\//, "");
+    const domain = url.origin.replace(/^https?:\/\/(www\.)?/, "");
     const fileName = downloadItem.filename.split('/').pop(); // 元のファイル名を取得
     if (fileName) {
         // ファイルの拡張子を取得
